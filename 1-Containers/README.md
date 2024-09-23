@@ -19,4 +19,14 @@
 * The Docker registry is the most commong registry
 * To run container images from specific registries a FQCN (Fully Qualified Container image Name) can be used at all times 
 
-## Container commands
+# Starting containers
+
+* Depends on the container being used.
+
+```
+# Docker
+docker run nginx
+
+# Kubernetes
+kubectl run mynginx --image=docker.io/library/nginx
+```
