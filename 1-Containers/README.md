@@ -25,8 +25,55 @@
 
 ```
 # Docker
-docker run nginx
+docker run -d nginx
 
-# Kubernetes
-kubectl run mynginx --image=docker.io/library/nginx
+# Running containers
+docker ps
+
+# Interactive shell
+docker run -it busybox
+```
+
+# Managing containers
+
+* The docker CLI provide many commands for managing containers
+```
+# Overview of running containers
+docker ps 
+
+# Overview of all containers
+docker ps -a 
+
+# Stop a running container
+docker stop <<name>>
+
+# List of images available
+docker images
+
+# Restart a container that have been used before
+docker start <<name>>
+
+# Inspect descripton of a container
+docker inspect <<name>>
+
+# Remove a container
+docker rm <<name>>
+
+# Kill a container (Do not use)
+docker kill <<name>>
+
+# Search images where the name or description of the image contains value 
+docker search <<value>>
+```
+
+# Container logging
+
+* Do not always connect to STDOUT
+* Container application output and errors are logged to teh container logs
+
+```
+docker run --name=mydb mariadb
+docker ps
+docker ps -a
+docker logs mydb
 ```
