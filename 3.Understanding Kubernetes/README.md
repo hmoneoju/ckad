@@ -23,7 +23,7 @@
   * container runtime interface (cri): runs the containers
   * kubelet: the part that is contacted by the kube-scheduler to run the actual containers on Pods
 
-![K8s Architecture](../resources/architecture.jpg "K8s Architecture")
+<img src="../resources/architecture.jpg" width="600" height="300">
 
 # API resources
 
@@ -36,8 +36,7 @@
   * Ingress/Gateway API: provides a reverse proxy for application access
   * Persistent Volumes: represent persistent non-ephemeral storage
 
-
-![API resources](../resources/api_resources.jpg "API resources")
+<img src="../resources/api_resources.jpg" width="600" height="300">
 
 # Lab
 
