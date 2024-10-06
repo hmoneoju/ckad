@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  creationTimestamp: null
+  name: sleepy
+spec:
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+      name: sleepy
+    spec:
+      activeDeadlineSeconds: 15
+      template:
+        metadata:
+          creationTimestamp: null
+        spec:
+          containers:
+          - command:
+            - sleep
+            - "30"
+            image: busybox
+            name: sleepy
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: '* * * * *'
+status: {}
